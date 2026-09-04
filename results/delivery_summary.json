@@ -1,0 +1,27 @@
+{
+  "national": {
+    "n_delivered_orders": 96470,
+    "avg_delivery_days": 12.56,
+    "median_delivery_days": 10.22,
+    "std_delivery_days": 9.55,
+    "avg_estimate_days": 23.74,
+    "pct_late": 8.11,
+    "avg_days_early_vs_estimate": 11.18
+  },
+  "slowest_state": {
+    "state": "RR",
+    "n_orders": 41,
+    "avg_delivery_days": 29.387546014001806,
+    "avg_days_early_vs_estimate": 16.594597730352305,
+    "pct_late": 12.195121951219512,
+    "avg_review_score": 3.902439024390244
+  },
+  "fastest_state": {
+    "state": "SP",
+    "n_orders": 40494,
+    "avg_delivery_days": 8.761385996084925,
+    "avg_days_early_vs_estimate": 10.380349671144696,
+    "pct_late": 5.894700449449301,
+    "avg_review_score": 4.23403467180323
+  }
+}

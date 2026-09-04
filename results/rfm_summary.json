@@ -1,0 +1,72 @@
+{
+  "snapshot_date": "2018-08-30",
+  "n_customers": 93358,
+  "silhouette_scores_by_k": {
+    "2": 0.7069,
+    "3": 0.3597,
+    "4": 0.3708,
+    "5": 0.3563,
+    "6": 0.3452,
+    "7": 0.3572,
+    "8": 0.3437
+  },
+  "statistically_best_k": 2,
+  "statistically_best_k_silhouette": 0.7069,
+  "statistically_best_k_note": "k=2 wins on silhouette because ~97% of customers have frequency==1 (one-time buyers) \u2014 geometrically clean but not a usable business segmentation.",
+  "chosen_k_for_segmentation": 4,
+  "chosen_k_silhouette": 0.3708,
+  "cluster_profile": [
+    {
+      "cluster": 0,
+      "n_customers": 27855,
+      "avg_recency_days": 173.52119906659487,
+      "avg_frequency": 1.0,
+      "avg_monetary": 318.2288695027823,
+      "total_monetary": 8864265.16,
+      "pct_customers": 29.836757428393923,
+      "pct_revenue": 57.486350342851175,
+      "recency_rank": 2.0,
+      "monetary_rank": 1.0,
+      "segment_name": "High-Value One-Time Buyers"
+    },
+    {
+      "cluster": 3,
+      "n_customers": 2801,
+      "avg_recency_days": 220.2945376651196,
+      "avg_frequency": 2.1138878971795787,
+      "avg_monetary": 308.5281899321671,
+      "total_monetary": 864187.46,
+      "pct_customers": 3.0002784978255748,
+      "pct_revenue": 5.60441076510607,
+      "recency_rank": 3.0,
+      "monetary_rank": 2.0,
+      "segment_name": "Repeat / Loyal Customers"
+    },
+    {
+      "cluster": 2,
+      "n_customers": 27007,
+      "avg_recency_days": 425.3799015070167,
+      "avg_frequency": 1.0,
+      "avg_monetary": 119.46544044136705,
+      "total_monetary": 3226403.15,
+      "pct_customers": 28.928426058827313,
+      "pct_revenue": 20.92380343777742,
+      "recency_rank": 4.0,
+      "monetary_rank": 3.0,
+      "segment_name": "Lapsed / Win-Back Target"
+    },
+    {
+      "cluster": 1,
+      "n_customers": 35695,
+      "avg_recency_days": 147.7813419246393,
+      "avg_frequency": 1.0,
+      "avg_monetary": 69.0549931362936,
+      "total_monetary": 2464917.98,
+      "pct_customers": 38.23453801495319,
+      "pct_revenue": 15.985435454265339,
+      "recency_rank": 1.0,
+      "monetary_rank": 4.0,
+      "segment_name": "Low-Value / Price-Sensitive"
+    }
+  ]
+}

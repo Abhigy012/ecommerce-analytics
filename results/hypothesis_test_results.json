@@ -1,0 +1,31 @@
+{
+  "welch_ttest": {
+    "t_statistic": -91.002,
+    "p_value": 0.0,
+    "cohens_d": -1.4409,
+    "mean_review_late": 2.545,
+    "mean_review_on_time": 4.2834
+  },
+  "mann_whitney_u": {
+    "u_statistic": 153990605.5,
+    "p_value": 0.0
+  },
+  "chi_square": {
+    "chi2": 10020.2609,
+    "p_value": 0.0,
+    "dof": 1,
+    "cramers_v": 0.3223,
+    "pct_positive_review_late": 34.0,
+    "pct_positive_review_on_time": 82.47
+  },
+  "spearman_delay_vs_review": {
+    "rho": 0.1785,
+    "p_value": 0.0
+  },
+  "confounder_check_sp_only": {
+    "n_sp_orders": 40494,
+    "mean_review_late_sp": 2.8881,
+    "mean_review_on_time_sp": 4.3183,
+    "mann_whitney_p_value": 0.0
+  }
+}

@@ -1,0 +1,429 @@
+{
+  "dataset": {
+    "source": "Olist Brazilian E-Commerce Public Dataset (2016-09 to 2018-10)",
+    "n_orders": 99441,
+    "n_delivered_orders": 96470,
+    "n_customers_unique": 93358,
+    "n_sellers": 2970,
+    "total_source_rows_loaded": 1551698
+  },
+  "rfm_segmentation": {
+    "snapshot_date": "2018-08-30",
+    "n_customers": 93358,
+    "silhouette_scores_by_k": {
+      "2": 0.7069,
+      "3": 0.3597,
+      "4": 0.3708,
+      "5": 0.3563,
+      "6": 0.3452,
+      "7": 0.3572,
+      "8": 0.3437
+    },
+    "statistically_best_k": 2,
+    "statistically_best_k_silhouette": 0.7069,
+    "statistically_best_k_note": "k=2 wins on silhouette because ~97% of customers have frequency==1 (one-time buyers) \u2014 geometrically clean but not a usable business segmentation.",
+    "chosen_k_for_segmentation": 4,
+    "chosen_k_silhouette": 0.3708,
+    "cluster_profile": [
+      {
+        "cluster": 0,
+        "n_customers": 27855,
+        "avg_recency_days": 173.52119906659487,
+        "avg_frequency": 1.0,
+        "avg_monetary": 318.2288695027823,
+        "total_monetary": 8864265.16,
+        "pct_customers": 29.836757428393923,
+        "pct_revenue": 57.486350342851175,
+        "recency_rank": 2.0,
+        "monetary_rank": 1.0,
+        "segment_name": "High-Value One-Time Buyers"
+      },
+      {
+        "cluster": 3,
+        "n_customers": 2801,
+        "avg_recency_days": 220.2945376651196,
+        "avg_frequency": 2.1138878971795787,
+        "avg_monetary": 308.5281899321671,
+        "total_monetary": 864187.46,
+        "pct_customers": 3.0002784978255748,
+        "pct_revenue": 5.60441076510607,
+        "recency_rank": 3.0,
+        "monetary_rank": 2.0,
+        "segment_name": "Repeat / Loyal Customers"
+      },
+      {
+        "cluster": 2,
+        "n_customers": 27007,
+        "avg_recency_days": 425.3799015070167,
+        "avg_frequency": 1.0,
+        "avg_monetary": 119.46544044136705,
+        "total_monetary": 3226403.15,
+        "pct_customers": 28.928426058827313,
+        "pct_revenue": 20.92380343777742,
+        "recency_rank": 4.0,
+        "monetary_rank": 3.0,
+        "segment_name": "Lapsed / Win-Back Target"
+      },
+      {
+        "cluster": 1,
+        "n_customers": 35695,
+        "avg_recency_days": 147.7813419246393,
+        "avg_frequency": 1.0,
+        "avg_monetary": 69.0549931362936,
+        "total_monetary": 2464917.98,
+        "pct_customers": 38.23453801495319,
+        "pct_revenue": 15.985435454265339,
+        "recency_rank": 1.0,
+        "monetary_rank": 4.0,
+        "segment_name": "Low-Value / Price-Sensitive"
+      }
+    ]
+  },
+  "cohort_retention": {
+    "total_customers_with_delivered_order": 93358,
+    "customers_with_2plus_orders": 2801,
+    "overall_repeat_purchase_rate_pct": 3.0,
+    "month1_retention_pct_weighted": 0.48,
+    "n_cohort_months": 23
+  },
+  "delivery_performance": {
+    "national": {
+      "n_delivered_orders": 96470,
+      "avg_delivery_days": 12.56,
+      "median_delivery_days": 10.22,
+      "std_delivery_days": 9.55,
+      "avg_estimate_days": 23.74,
+      "pct_late": 8.11,
+      "avg_days_early_vs_estimate": 11.18
+    },
+    "slowest_state": {
+      "state": "RR",
+      "n_orders": 41,
+      "avg_delivery_days": 29.387546014001806,
+      "avg_days_early_vs_estimate": 16.594597730352305,
+      "pct_late": 12.195121951219512,
+      "avg_review_score": 3.902439024390244
+    },
+    "fastest_state": {
+      "state": "SP",
+      "n_orders": 40494,
+      "avg_delivery_days": 8.761385996084925,
+      "avg_days_early_vs_estimate": 10.380349671144696,
+      "pct_late": 5.894700449449301,
+      "avg_review_score": 4.23403467180323
+    }
+  },
+  "hypothesis_testing": {
+    "welch_ttest": {
+      "t_statistic": -91.002,
+      "p_value": 0.0,
+      "cohens_d": -1.4409,
+      "mean_review_late": 2.545,
+      "mean_review_on_time": 4.2834
+    },
+    "mann_whitney_u": {
+      "u_statistic": 153990605.5,
+      "p_value": 0.0
+    },
+    "chi_square": {
+      "chi2": 10020.2609,
+      "p_value": 0.0,
+      "dof": 1,
+      "cramers_v": 0.3223,
+      "pct_positive_review_late": 34.0,
+      "pct_positive_review_on_time": 82.47
+    },
+    "spearman_delay_vs_review": {
+      "rho": 0.1785,
+      "p_value": 0.0
+    },
+    "confounder_check_sp_only": {
+      "n_sp_orders": 40494,
+      "mean_review_late_sp": 2.8881,
+      "mean_review_on_time_sp": 4.3183,
+      "mann_whitney_p_value": 0.0
+    }
+  },
+  "seller_category": {
+    "top10_revenue_categories": [
+      {
+        "category": "health_beauty",
+        "revenue": 1233131.72,
+        "n_orders": 8647,
+        "n_items": 9465,
+        "avg_price": 130.28333016376124,
+        "avg_review_score": 4.1748547279450605,
+        "pct_late": 9.054410987849975
+      },
+      {
+        "category": "watches_gifts",
+        "revenue": 1166176.98,
+        "n_orders": 5495,
+        "n_items": 5859,
+        "avg_price": 199.04027649769586,
+        "avg_review_score": 4.055982249530636,
+        "pct_late": 8.277863116572794
+      },
+      {
+        "category": "bed_bath_table",
+        "revenue": 1023434.76,
+        "n_orders": 9272,
+        "n_items": 10953,
+        "avg_price": 93.43876198301835,
+        "avg_review_score": 3.900757783255729,
+        "pct_late": 8.399525244225327
+      },
+      {
+        "category": "sports_leisure",
+        "revenue": 954852.55,
+        "n_orders": 7530,
+        "n_items": 8431,
+        "avg_price": 113.25495789348832,
+        "avg_review_score": 4.151820661843198,
+        "pct_late": 7.413118254062388
+      },
+      {
+        "category": "computers_accessories",
+        "revenue": 888724.61,
+        "n_orders": 6530,
+        "n_items": 7644,
+        "avg_price": 116.26433935112506,
+        "avg_review_score": 3.97854526425955,
+        "pct_late": 7.770800627943484
+      },
+      {
+        "category": "furniture_decor",
+        "revenue": 711927.6900000001,
+        "n_orders": 6307,
+        "n_items": 8160,
+        "avg_price": 87.24604044117648,
+        "avg_review_score": 3.9375,
+        "pct_late": 8.431372549019608
+      },
+      {
+        "category": "housewares",
+        "revenue": 615628.69,
+        "n_orders": 5743,
+        "n_items": 6795,
+        "avg_price": 90.60024871228843,
+        "avg_review_score": 4.093156732891832,
+        "pct_late": 6.490066225165562
+      },
+      {
+        "category": "cool_stuff",
+        "revenue": 610204.1,
+        "n_orders": 3559,
+        "n_items": 3718,
+        "avg_price": 164.12159763313608,
+        "avg_review_score": 4.1831629908552985,
+        "pct_late": 6.750941366325981
+      },
+      {
+        "category": "auto",
+        "revenue": 578966.65,
+        "n_orders": 3810,
+        "n_items": 4140,
+        "avg_price": 139.84701690821257,
+        "avg_review_score": 4.089613526570048,
+        "pct_late": 8.285024154589372
+      },
+      {
+        "category": "toys",
+        "revenue": 471286.48,
+        "n_orders": 3804,
+        "n_items": 4030,
+        "avg_price": 116.94453598014888,
+        "avg_review_score": 4.189330024813896,
+        "pct_late": 7.419354838709677
+      }
+    ],
+    "worst10_review_categories_min100orders": [
+      {
+        "category": "office_furniture",
+        "revenue": 268154.31,
+        "n_orders": 1254,
+        "n_items": 1668,
+        "avg_price": 160.7639748201439,
+        "avg_review_score": 3.5071942446043165,
+        "pct_late": 8.93285371702638
+      },
+      {
+        "category": "fashion_male_clothing",
+        "revenue": 10452.33,
+        "n_orders": 106,
+        "n_items": 125,
+        "avg_price": 83.61864,
+        "avg_review_score": 3.736,
+        "pct_late": 5.6000000000000005
+      },
+      {
+        "category": "fixed_telephony",
+        "revenue": 55315.21,
+        "n_orders": 212,
+        "n_items": 255,
+        "avg_price": 216.92239215686274,
+        "avg_review_score": 3.7450980392156863,
+        "pct_late": 4.313725490196078
+      },
+      {
+        "category": "audio",
+        "revenue": 50570.6,
+        "n_orders": 348,
+        "n_items": 362,
+        "avg_price": 139.69779005524862,
+        "avg_review_score": 3.820441988950276,
+        "pct_late": 12.70718232044199
+      },
+      {
+        "category": "home_confort",
+        "revenue": 58008.450000000004,
+        "n_orders": 392,
+        "n_items": 429,
+        "avg_price": 135.21783216783217,
+        "avg_review_score": 3.8484848484848486,
+        "pct_late": 10.256410256410255
+      },
+      {
+        "category": "bed_bath_table",
+        "revenue": 1023434.76,
+        "n_orders": 9272,
+        "n_items": 10953,
+        "avg_price": 93.43876198301835,
+        "avg_review_score": 3.900757783255729,
+        "pct_late": 8.399525244225327
+      },
+      {
+        "category": "furniture_living_room",
+        "revenue": 67350.7,
+        "n_orders": 414,
+        "n_items": 495,
+        "avg_price": 136.0620202020202,
+        "avg_review_score": 3.915151515151515,
+        "pct_late": 7.878787878787878
+      },
+      {
+        "category": "unknown",
+        "revenue": 170726.63,
+        "n_orders": 1392,
+        "n_items": 1537,
+        "avg_price": 111.07783344176968,
+        "avg_review_score": 3.9206245933636956,
+        "pct_late": 9.36890045543266
+      },
+      {
+        "category": "furniture_decor",
+        "revenue": 711927.6900000001,
+        "n_orders": 6307,
+        "n_items": 8160,
+        "avg_price": 87.24604044117648,
+        "avg_review_score": 3.9375,
+        "pct_late": 8.431372549019608
+      },
+      {
+        "category": "home_construction",
+        "revenue": 81407.57,
+        "n_orders": 483,
+        "n_items": 596,
+        "avg_price": 136.58988255033557,
+        "avg_review_score": 3.9446308724832213,
+        "pct_late": 8.221476510067115
+      }
+    ],
+    "n_qualified_sellers": 627,
+    "n_total_sellers": 2970,
+    "top10_sellers_by_revenue": [
+      {
+        "seller_id": "4869f7a5dfa277a7dca6462dcf3b52b2",
+        "revenue": 226987.93,
+        "n_orders": 1124,
+        "avg_review_score": 4.128919860627177,
+        "pct_late": 11.585365853658537,
+        "seller_state": "SP"
+      },
+      {
+        "seller_id": "53243585a1d6dc2643021fd1853d8905",
+        "revenue": 217940.44,
+        "n_orders": 348,
+        "avg_review_score": 4.12,
+        "pct_late": 4.0,
+        "seller_state": "BA"
+      },
+      {
+        "seller_id": "4a3ca9315b744ce9f8e9374361493884",
+        "revenue": 196882.12,
+        "n_orders": 1772,
+        "avg_review_score": 3.8045151359671627,
+        "pct_late": 10.979989738327347,
+        "seller_state": "SP"
+      },
+      {
+        "seller_id": "fa1c13f2614d7b5c4749cbc52fecda94",
+        "revenue": 190917.13999999998,
+        "n_orders": 578,
+        "avg_review_score": 4.360967184801382,
+        "pct_late": 10.189982728842832,
+        "seller_state": "SP"
+      },
+      {
+        "seller_id": "7c67e1448b00f6e969d365cea6b010ab",
+        "revenue": 186570.05,
+        "n_orders": 973,
+        "avg_review_score": 3.348339483394834,
+        "pct_late": 9.59409594095941,
+        "seller_state": "SP"
+      },
+      {
+        "seller_id": "7e93a43ef30c4f03f38b393420bc753a",
+        "revenue": 165981.49,
+        "n_orders": 319,
+        "avg_review_score": 4.354037267080745,
+        "pct_late": 5.590062111801243,
+        "seller_state": "SP"
+      },
+      {
+        "seller_id": "da8622b14eb17ae2831f4ac5b9dab84a",
+        "revenue": 159816.87,
+        "n_orders": 1311,
+        "avg_review_score": 4.066537467700258,
+        "pct_late": 7.299741602067184,
+        "seller_state": "SP"
+      },
+      {
+        "seller_id": "7a67c85e85bb2ce8582c35f2203ad736",
+        "revenue": 139658.69,
+        "n_orders": 1145,
+        "avg_review_score": 4.2536796536796535,
+        "pct_late": 5.887445887445888,
+        "seller_state": "SP"
+      },
+      {
+        "seller_id": "1025f0e2d44d7041d6cf58b6550e0bfa",
+        "revenue": 138208.56,
+        "n_orders": 910,
+        "avg_review_score": 3.8464788732394366,
+        "pct_late": 9.225352112676056,
+        "seller_state": "SP"
+      },
+      {
+        "seller_id": "955fee9216a65b617aa5c0531780ce60",
+        "revenue": 131836.71,
+        "n_orders": 1261,
+        "avg_review_score": 4.074728260869565,
+        "pct_late": 8.084239130434783,
+        "seller_state": "SP"
+      }
+    ],
+    "n_revenue_at_risk_sellers": 83,
+    "revenue_at_risk_total": 3854394.13,
+    "revenue_at_risk_pct_of_qualified": 37.79
+  },
+  "sample_size_power_calc": {
+    "input_std_delivery_days": 9.55,
+    "detectable_improvement_days": 1.0,
+    "alpha": 0.05,
+    "power": 0.8,
+    "n_one_sample_one_sided": 564,
+    "n_one_sample_two_sided": 716,
+    "n_per_group_two_sample_two_sided": 1432
+  }
+}
